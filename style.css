@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "Calibri";
+}
+
+header {
+    background: #2d6880;
+    width: 100%;
+    clear: both;
+    display: table;
+    text-align: center;
+}
+
+.menu {
+    width: 100px;
+    margin: 0;
+}
+
+nav {
+    text-align: center; /* Cambiado de float: center a text-align: center */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 100px;
+    padding: 12px;
+    float: left;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    font-weight: bold;
+    position: relative; /* Añadido para que ::before funcione correctamente */
+}
+
+nav ul li a::before {
+    display: block;
+    content: "";
+    width: 0;
+    background: #2d424b;
+    height: 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: width 0.3s ease; /* Añadido para animar la transición */
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
