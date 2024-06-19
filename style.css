@@ -9,8 +9,9 @@ body {
     font-family: "Calibri";
 }
 
-header {
+header {                                      
     background: #2d6880;
+ 
     width: 100%;
     clear: both;
     display: table;
